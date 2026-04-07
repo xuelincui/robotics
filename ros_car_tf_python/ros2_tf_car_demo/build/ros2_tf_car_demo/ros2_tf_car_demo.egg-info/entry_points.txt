@@ -1,0 +1,3 @@
+[console_scripts]
+car_tf_broadcaster = ros2_tf_car_demo.car_tf_broadcaster:main
+car_tf_listener = ros2_tf_car_demo.car_tf_listener:main

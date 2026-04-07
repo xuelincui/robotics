@@ -1,0 +1,135 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <world name="car_world">
+
+    <physics name="1ms" type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+    <plugin filename="gz-sim-physics-system"
+            name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-scene-broadcaster-system"
+            name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-user-commands-system"
+            name="gz::sim::systems::UserCommands"/>
+
+    <light name="sun" type="directional">
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <cast_shadows>true</cast_shadows>
+    </light>
+
+    <!-- Ground -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry><plane><normal>0 0 1</normal></plane></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><plane><normal>0 0 1</normal><size>200 200</size></plane></geometry>
+          <material><ambient>0.4 0.4 0.4 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Car -->
+    <model name="vehicle">
+      <pose>0 0 0.35 0 0 0</pose>
+
+      <link name="chassis">
+        <inertial>
+          <mass>1200</mass>
+          <inertia><ixx>400</ixx><iyy>500</iyy><izz>800</izz></inertia>
+        </inertial>
+        <visual name="visual">
+          <geometry><box><size>2.0 0.9 0.4</size></box></geometry>
+          <material><ambient>0.8 0.2 0.2 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>2.0 0.9 0.4</size></box></geometry>
+        </collision>
+      </link>
+
+      <link name="wheel_fl">
+        <pose>0.7 0.6 -0.2 1.5707 0 0</pose>
+        <inertial><mass>20</mass></inertial>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.3</radius><length>0.2</length></cylinder></geometry>
+          <material><ambient>0.1 0.1 0.1 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><cylinder><radius>0.3</radius><length>0.2</length></cylinder></geometry>
+        </collision>
+      </link>
+
+      <link name="wheel_fr">
+        <pose>0.7 -0.6 -0.2 1.5707 0 0</pose>
+        <inertial><mass>20</mass></inertial>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.3</radius><length>0.2</length></cylinder></geometry>
+          <material><ambient>0.1 0.1 0.1 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><cylinder><radius>0.3</radius><length>0.2</length></cylinder></geometry>
+        </collision>
+      </link>
+
+      <link name="wheel_rl">
+        <pose>-0.7 0.6 -0.2 1.5707 0 0</pose>
+        <inertial><mass>20</mass></inertial>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.3</radius><length>0.2</length></cylinder></geometry>
+          <material><ambient>0.1 0.1 0.1 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><cylinder><radius>0.3</radius><length>0.2</length></cylinder></geometry>
+        </collision>
+      </link>
+
+      <link name="wheel_rr">
+        <pose>-0.7 -0.6 -0.2 1.5707 0 0</pose>
+        <inertial><mass>20</mass></inertial>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.3</radius><length>0.2</length></cylinder></geometry>
+          <material><ambient>0.1 0.1 0.1 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><cylinder><radius>0.3</radius><length>0.2</length></cylinder></geometry>
+        </collision>
+      </link>
+
+      <joint name="joint_fl" type="revolute">
+        <parent>chassis</parent><child>wheel_fl</child>
+        <axis><xyz>0 0 1</xyz></axis>
+      </joint>
+      <joint name="joint_fr" type="revolute">
+        <parent>chassis</parent><child>wheel_fr</child>
+        <axis><xyz>0 0 1</xyz></axis>
+      </joint>
+      <joint name="joint_rl" type="revolute">
+        <parent>chassis</parent><child>wheel_rl</child>
+        <axis><xyz>0 0 1</xyz></axis>
+      </joint>
+      <joint name="joint_rr" type="revolute">
+        <parent>chassis</parent><child>wheel_rr</child>
+        <axis><xyz>0 0 1</xyz></axis>
+      </joint>
+
+      <plugin filename="gz-sim-diff-drive-system"
+              name="gz::sim::systems::DiffDrive">
+        <left_joint>joint_fl</left_joint>
+        <left_joint>joint_rl</left_joint>
+        <right_joint>joint_fr</right_joint>
+        <right_joint>joint_rr</right_joint>
+        <wheel_separation>1.2</wheel_separation>
+        <wheel_radius>0.3</wheel_radius>
+        <odom_publish_frequency>10</odom_publish_frequency>
+        <topic>cmd_vel</topic>
+        <odom_topic>odometry</odom_topic>
+      </plugin>
+
+    </model>
+  </world>
+</sdf>
