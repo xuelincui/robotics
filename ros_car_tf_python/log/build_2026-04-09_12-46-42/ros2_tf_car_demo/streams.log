@@ -1,0 +1,28 @@
+[1.404s] Invoking command in '/home/xuelin/repo/robotics/ros_car_tf_python/ros2_tf_car_demo': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/xuelin/repo/robotics/ros_car_tf_python/build/ros2_tf_car_demo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xuelin/repo/robotics/ros_car_tf_python/install/ros2_tf_car_demo/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/ros2_tf_car_demo build --build-base /home/xuelin/repo/robotics/ros_car_tf_python/build/ros2_tf_car_demo/build install --record /home/xuelin/repo/robotics/ros_car_tf_python/build/ros2_tf_car_demo/install.log --single-version-externally-managed install_data
+[1.637s] /home/xuelin/.local/lib/python3.12/site-packages/setuptools/_distutils/dist.py:270: UserWarning: Unknown distribution option: 'tests_require'
+[1.637s]   warnings.warn(msg)
+[1.811s] running egg_info
+[1.843s] writing ../build/ros2_tf_car_demo/ros2_tf_car_demo.egg-info/PKG-INFO
+[1.843s] writing dependency_links to ../build/ros2_tf_car_demo/ros2_tf_car_demo.egg-info/dependency_links.txt
+[1.843s] writing entry points to ../build/ros2_tf_car_demo/ros2_tf_car_demo.egg-info/entry_points.txt
+[1.844s] writing requirements to ../build/ros2_tf_car_demo/ros2_tf_car_demo.egg-info/requires.txt
+[1.844s] writing top-level names to ../build/ros2_tf_car_demo/ros2_tf_car_demo.egg-info/top_level.txt
+[1.912s] reading manifest file '../build/ros2_tf_car_demo/ros2_tf_car_demo.egg-info/SOURCES.txt'
+[1.914s] writing manifest file '../build/ros2_tf_car_demo/ros2_tf_car_demo.egg-info/SOURCES.txt'
+[1.914s] running build
+[1.914s] running build_py
+[1.914s] copying ros2_tf_car_demo/__init__.py -> /home/xuelin/repo/robotics/ros_car_tf_python/build/ros2_tf_car_demo/build/lib/ros2_tf_car_demo
+[1.915s] running install
+[1.921s] running install_lib
+[1.956s] byte-compiling /home/xuelin/repo/robotics/ros_car_tf_python/install/ros2_tf_car_demo/lib/python3.12/site-packages/ros2_tf_car_demo/car_tf_listener.py to car_tf_listener.cpython-312.pyc
+[1.957s] byte-compiling /home/xuelin/repo/robotics/ros_car_tf_python/install/ros2_tf_car_demo/lib/python3.12/site-packages/ros2_tf_car_demo/car_tf_broadcaster.py to car_tf_broadcaster.cpython-312.pyc
+[1.960s] running install_data
+[1.960s] copying resource/ros2_tf_car_demo -> /home/xuelin/repo/robotics/ros_car_tf_python/install/ros2_tf_car_demo/share/ament_index/resource_index/packages
+[1.961s] running install_egg_info
+[1.996s] removing '/home/xuelin/repo/robotics/ros_car_tf_python/install/ros2_tf_car_demo/lib/python3.12/site-packages/ros2_tf_car_demo-0.0.1-py3.12.egg-info' (and everything under it)
+[1.996s] Copying ../build/ros2_tf_car_demo/ros2_tf_car_demo.egg-info to /home/xuelin/repo/robotics/ros_car_tf_python/install/ros2_tf_car_demo/lib/python3.12/site-packages/ros2_tf_car_demo-0.0.1-py3.12.egg-info
+[1.998s] running install_scripts
+[2.171s] Installing car_tf_broadcaster script to /home/xuelin/repo/robotics/ros_car_tf_python/install/ros2_tf_car_demo/lib/ros2_tf_car_demo
+[2.171s] Installing car_tf_listener script to /home/xuelin/repo/robotics/ros_car_tf_python/install/ros2_tf_car_demo/lib/ros2_tf_car_demo
+[2.172s] writing list of installed files to '/home/xuelin/repo/robotics/ros_car_tf_python/build/ros2_tf_car_demo/install.log'
+[2.207s] Invoked command in '/home/xuelin/repo/robotics/ros_car_tf_python/ros2_tf_car_demo' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/xuelin/repo/robotics/ros_car_tf_python/build/ros2_tf_car_demo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xuelin/repo/robotics/ros_car_tf_python/install/ros2_tf_car_demo/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/ros2_tf_car_demo build --build-base /home/xuelin/repo/robotics/ros_car_tf_python/build/ros2_tf_car_demo/build install --record /home/xuelin/repo/robotics/ros_car_tf_python/build/ros2_tf_car_demo/install.log --single-version-externally-managed install_data

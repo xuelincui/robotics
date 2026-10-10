@@ -1,0 +1,26 @@
+/home/xuelin/.local/lib/python3.12/site-packages/setuptools/_distutils/dist.py:270: UserWarning: Unknown distribution option: 'tests_require'
+  warnings.warn(msg)
+running egg_info
+writing ../build/ros2_tf_car_demo/ros2_tf_car_demo.egg-info/PKG-INFO
+writing dependency_links to ../build/ros2_tf_car_demo/ros2_tf_car_demo.egg-info/dependency_links.txt
+writing entry points to ../build/ros2_tf_car_demo/ros2_tf_car_demo.egg-info/entry_points.txt
+writing requirements to ../build/ros2_tf_car_demo/ros2_tf_car_demo.egg-info/requires.txt
+writing top-level names to ../build/ros2_tf_car_demo/ros2_tf_car_demo.egg-info/top_level.txt
+reading manifest file '../build/ros2_tf_car_demo/ros2_tf_car_demo.egg-info/SOURCES.txt'
+writing manifest file '../build/ros2_tf_car_demo/ros2_tf_car_demo.egg-info/SOURCES.txt'
+running build
+running build_py
+copying ros2_tf_car_demo/__init__.py -> /home/xuelin/repo/robotics/ros_car_tf_python/build/ros2_tf_car_demo/build/lib/ros2_tf_car_demo
+running install
+running install_lib
+byte-compiling /home/xuelin/repo/robotics/ros_car_tf_python/install/ros2_tf_car_demo/lib/python3.12/site-packages/ros2_tf_car_demo/car_tf_listener.py to car_tf_listener.cpython-312.pyc
+byte-compiling /home/xuelin/repo/robotics/ros_car_tf_python/install/ros2_tf_car_demo/lib/python3.12/site-packages/ros2_tf_car_demo/car_tf_broadcaster.py to car_tf_broadcaster.cpython-312.pyc
+running install_data
+copying resource/ros2_tf_car_demo -> /home/xuelin/repo/robotics/ros_car_tf_python/install/ros2_tf_car_demo/share/ament_index/resource_index/packages
+running install_egg_info
+removing '/home/xuelin/repo/robotics/ros_car_tf_python/install/ros2_tf_car_demo/lib/python3.12/site-packages/ros2_tf_car_demo-0.0.1-py3.12.egg-info' (and everything under it)
+Copying ../build/ros2_tf_car_demo/ros2_tf_car_demo.egg-info to /home/xuelin/repo/robotics/ros_car_tf_python/install/ros2_tf_car_demo/lib/python3.12/site-packages/ros2_tf_car_demo-0.0.1-py3.12.egg-info
+running install_scripts
+Installing car_tf_broadcaster script to /home/xuelin/repo/robotics/ros_car_tf_python/install/ros2_tf_car_demo/lib/ros2_tf_car_demo
+Installing car_tf_listener script to /home/xuelin/repo/robotics/ros_car_tf_python/install/ros2_tf_car_demo/lib/ros2_tf_car_demo
+writing list of installed files to '/home/xuelin/repo/robotics/ros_car_tf_python/build/ros2_tf_car_demo/install.log'

@@ -1,5 +1,6 @@
 README.md
 package.xml
+setup.cfg
 setup.py
 ../build/ros2_tf_car_demo/ros2_tf_car_demo.egg-info/PKG-INFO
 ../build/ros2_tf_car_demo/ros2_tf_car_demo.egg-info/SOURCES.txt
